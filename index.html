@@ -18,11 +18,17 @@
 </head>
 
 <body>
-
+    <button id="scrollToTopButton" class="btn btn-secondary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
+        </svg>
+    </button>
     <header>
-        <nav class="navbar navbar-expand-lg border border-bottom border-secondary-subtle">
+        <nav id="navbar-example2" class="navbar fixed-top navbar-expand-lg border-bottom border-secondary-subtle">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand page-scroll" href="#">
                     <div class="row align-items-center">
                         <div class="col-6 text-end">
                             <img src="img/logo.png" alt="Logo" height="80"
@@ -40,24 +46,25 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link page-scroll active" href="#hero">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
+                            <a class="nav-link page-scroll" href="#about">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Product</a>
+                            <a class="nav-link page-scroll" href="#product">Product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link page-scroll" href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <main>
-        <section id="hero" class="border border-bottom ">
+    <main data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -25%"
+        data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        <section id="hero" class="border-bottom mt-5">
             <div class="container col-xxl-8 px-4 py-5">
                 <div class="row flex-lg-row-reverse align-items-center justify-content-center g-5 py-5">
                     <div class="col-10 col-sm-8 col-lg-4">
@@ -77,7 +84,7 @@
                 </div>
                 <div class="row d-flex align-items-center justify-content-center">
                     <div class="col-12 text-center">
-                        <a href="#" class="nav-link">
+                        <a href="#about" class="nav-link page-scroll">
                             Slide Down <br>
                             <span>v</span>
                         </a>
@@ -106,7 +113,7 @@
         <section id="product" class="my-5 overflow-hidden px-4">
             <h1 class="display-5 fw-bold text-body-emphasis lh-1 my-5 text-center">Our Product</h1>
             <div class="row align-items-center justify-content-center ">
-                <div class="col-md-4">
+                <div class="col-md-4 mt-4">
                     <div class="card text-bg-dark">
                         <img src="img/s1.png" class="card-img" alt="Celana Pendek" height="300">
                         <div class="card-img-overlay">
@@ -114,7 +121,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mt-4">
                     <div class="card text-bg-dark">
                         <img src="img/s2.png" class="card-img" alt="Jaket" height="300"
                             style="transform: rotate(180deg);">
@@ -123,7 +130,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mt-4">
                     <div class="card text-bg-dark">
                         <img src="img/s3.png" class="card-img" alt="Baju Kaos" height="300">
                         <div class="card-img-overlay">
@@ -132,8 +139,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-4 align-items-center justify-content-center ">
-                <div class="col-md-4">
+            <div class="row align-items-center justify-content-center ">
+                <div class="col-md-4 mt-4">
                     <div class="card text-bg-dark">
                         <img src="img/s4.png" class="card-img" alt="Celana Olahraga" height="300">
                         <div class="card-img-overlay">
@@ -141,10 +148,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mt-4">
                     <div class="card text-bg-dark">
-                        <img src="img/s5.png" class="card-img" alt="Celana Panjang" height="300"
-                            style="transform: rotate(270deg);">
+                        <img src="img/s5.png" class="card-img" alt="Celana Panjang" height="300">
                         <div class="card-img-overlay">
                             <h5 class="card-title">Celana Panjang</h5>
                         </div>
@@ -155,7 +161,7 @@
                 <a class="btn btn-dark w-50 mt-4">See More</a>
             </div>
         </section>
-        <section id="contact" class="my-5 overflow-hidden px-4">
+        <section id="contact" class="my-3 pb-4 overflow-hidden px-4">
             <h1 class="display-5 fw-bold text-body-emphasis lh-1 my-5 text-center">Contact Us</h1>
             <div class="row align-items-center justify-content-center ">
                 <div class="col-12 text-center">
@@ -163,7 +169,7 @@
                         class="d-inline-block align-text-top rounded-circle border">
                 </div>
             </div>
-            <div class="row align-items-center text-center  justify-content-center ">
+            <div class="row align-items-center text-center justify-content-center ">
                 <div class="col-12">
                     <h3>
                         Whatsapp
