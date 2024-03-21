@@ -56,8 +56,6 @@ if (exampleModal) {
 
 $(document).ready(function () {
   $("#form-pesanan").submit(function (e) {
-    e.preventDefault();
-
     // Mengambil data dari form
     var nama = $("#form-pesanan input[name='nama']").val();
     var nomor = $("#form-pesanan input[name='nomor']").val();
@@ -68,21 +66,37 @@ $(document).ready(function () {
     var imageElement = document.getElementById("image");
     var altText = imageElement.alt;
     // Memformat data untuk WhatsApp
-    var data =
-      "Nama: " +
-      nama +
-      "\nNomor Whatsapp: " +
-      nomor +
-      "\nAlamat: " +
-      alamat +
-      "\nPilihan: " +
-      pilihan +
-      "\nSesuai dengan gambar: " +
-      altText +
-      "\nJumlah Pembelian: " +
-      jumlah +
-      "\nCatatan: " +
-      catatan;
+    if (pilihan == "Sesuai Gambar") {
+      var data =
+        "Nama: " +
+        nama +
+        "\nNomor Whatsapp: " +
+        nomor +
+        "\nAlamat: " +
+        alamat +
+        "\nPilihan: " +
+        pilihan +
+        "\nSesuai dengan gambar: " +
+        altText +
+        "\nJumlah Pembelian: " +
+        jumlah +
+        "\nCatatan: " +
+        catatan;
+    } else {
+      var data =
+        "Nama: " +
+        nama +
+        "\nNomor Whatsapp: " +
+        nomor +
+        "\nAlamat: " +
+        alamat +
+        "\nPilihan: " +
+        pilihan +
+        "\nJumlah Pembelian: " +
+        jumlah +
+        "\nCatatan: " +
+        catatan;
+    }
 
     // Membuka WhatsApp dengan data yang sudah diformat
     window.open(
