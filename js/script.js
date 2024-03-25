@@ -63,6 +63,14 @@ $(".switch").change(function (e) {
   }
 });
 
+$(".navbar-toggler").on("click", () => {
+  const scrollY = window.scrollY;
+  // console.log(scrollY);
+  if (scrollY === 0) {
+    window.scrollTo(0, window.innerHeight * 0.1);
+  }
+});
+
 $(".page-scroll").on("click", function (e) {
   var tujuan = $(this).attr("href");
   var elTujuan = $(tujuan);
