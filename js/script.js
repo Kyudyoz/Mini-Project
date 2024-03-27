@@ -1,6 +1,3 @@
-// window.onload = function () {
-//   window.scrollTo(0, 0);
-// };
 $(document).ready(function () {
   if (localStorage.getItem("darkMode") == "darkMode") {
     $("html").attr("data-bs-theme", "dark");
